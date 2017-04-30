@@ -29,7 +29,6 @@ class sqlDump {
     protected $pdo;
     protected $logger;
     private $databaseName;
-    private $existLogger;
     
     function __construct(\PDO $pdo, \Monolog\Logger $logger = null) {
         
