@@ -13,5 +13,4 @@
 $dumpTest = new sqlDump\sqlDump($pdo, $logger);
 echo $dumpTest->dumpSQL();
 
-?>
 </pre>
