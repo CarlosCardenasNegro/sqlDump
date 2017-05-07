@@ -5,9 +5,13 @@
 <p>It require and use <code>monolog</code> to export messages, error, and so...</p>
 <h2>Usage</h2>
 <p>It's so simple. Create a instance of the class passing a <code>\PDO</code> instance and a <code>monolog</code> instance.</p>
-<p>And execute his <code>sqlDump</code> method <code>$example->sqlDump([$filename])</code>. The filename it's optional.</p>
+<p>And execute his <code>dumpSQL</code> method <code>$example->dumpSQL([$filename])</code>. The filename it's optional (it default to 'Dump.sql')</p>
 <p>The other methods can be used also to extract only tables, fields anda data and so,...  if you want.</p>
 <pre>
+<?php
+
 $dumpTest = new sqlDump\sqlDump($pdo, $logger);
-echo '<pre>' . $dumpTest->dumpSQL() . '</pre>';
+echo $dumpTest->dumpSQL();
+
+?>
 </pre>
